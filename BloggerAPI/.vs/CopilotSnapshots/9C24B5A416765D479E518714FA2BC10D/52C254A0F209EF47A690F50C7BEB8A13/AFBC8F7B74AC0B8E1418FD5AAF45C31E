@@ -1,0 +1,12 @@
+﻿using BloggerAPI.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+
+namespace BloggerAPI.Data
+{
+    public class BloggerDbContext(DbContextOptions<BloggerDbContext> options) : DbContext(options)
+    {
+        public DbSet<Post> Posts { get; set; }
+        public DbSet<User> Users { get; set; }
+    }
+}

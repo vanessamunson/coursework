@@ -1,0 +1,79 @@
+﻿using BloggerAPI.Data;
+using BloggerAPI.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+
+namespace BloggerAPI.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class PostsController(BloggerDbContext context) : ControllerBase
+    {
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Post>>> GetPosts()
+        {
+            return await context.Posts.ToListAsync();
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Post>> GetPost(int id)
+        {
+            var post = await context.Posts.FindAsync(id);
+
+            if (post == null)
+                return NotFound();
+
+            return post;
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<Post>> CreatePost(Post post)
+        {
+            var userExists = await context.Users.AnyAsync(u => u.Id == post.UserId);
+
+            if (!userExists)
+                return BadRequest("Invalid UserId.");
+
+            context.Posts.Add(post);
+            await context.SaveChangesAsync();
+
+            return CreatedAtAction(nameof(GetPost), new { id = post.Id }, post);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdatePost(int id, Post updatedPost)
+        {
+            var post = await context.Posts.FindAsync(id);
+
+            if (post == null)
+                return NotFound();
+
+            var userExists = await context.Users.AnyAsync(u => u.Id == updatedPost.UserId);
+
+            if (!userExists)
+                return BadRequest("Invalid UserId.");
+
+            post.Title = updatedPost.Title;
+            post.Body = updatedPost.Body;
+            post.UserId = updatedPost.UserId;
+
+            await context.SaveChangesAsync();
+
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeletePost(int id)
+        {
+            var post = await context.Posts.FindAsync(id);
+
+            if (post == null)
+                return NotFound();
+
+            context.Posts.Remove(post);
+            await context.SaveChangesAsync();
+
+            return NoContent();
+        }
+    }
+}
