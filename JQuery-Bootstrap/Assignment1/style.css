@@ -1,0 +1,27 @@
+.subscription-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    margin: 20px 0;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.subscription-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+.card-head{
+    padding: 10px;
+    border-radius: 10px;
+}
+p{
+    line-height: 1;
+
+}
+.btn{
+    width: 90%;
+}
+.mt-6{
+    margin-top: 2.5rem;
+}
+.selected{
+    border:1px solid #007bff !important;
+}

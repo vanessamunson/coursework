@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Website</title>
+
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+            }
+            header {
+                background-color: #41375a;
+                color: white;
+                font-weight: bold;
+                height: 30vh;
+                font-style: italic;
+                font-size: 4rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            main {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+            }
+            .left-col {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                padding: 0 2rem;
+            }
+            .nav-items {
+                list-style: none;
+            }
+            .nav-items li {
+                padding: 1rem 0;
+                border-bottom: 1px dotted black;
+                color:#523833;
+            }
+            .main-text {
+                grid-column: span 4;
+                padding: 3rem 2rem 2rem 0;
+            }
+            h2 {
+                font-weight: bold;
+                padding-bottom: 2rem;
+            }
+            footer {
+                background-color: #523833;
+                color: white;
+                height: 10vh;
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>My Website!</h1>
+        </header>
+        <main>
+            <div class="left-col">
+                <nav>
+                    <ul class="nav-items">
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Interesting Things</li>
+                        <li>Boring Things</li>
+                        <li>Contact</li>
+                    </ul>
+                </nav>
+                <p>
+                    Text text text text text text text text text text text text text text text text 
+                    text text text text text text text text text text text text text text text text text 
+                    text text text text.
+                </p>
+            </div>
+            <section class="main-text">
+                <h2>Lorem Ipsum</h2>
+                <p>
+                    I like cats. I like cats. I like cats. I like cats. I like cats. I like cats. I like cats. I like cats. I like cats.
+                    I like cats. I like cats. I like cats. I like cats. I like cats. I like cats. I like cats. I like cats. I like cats.
+                    I like cats. I like cats. I like cats. I like cats. I like cats. I like cats. I like cats. I like cats. I like cats.
+                </p>
+                <br>
+                <p>
+                    I like cats. I like cats. I like cats. I like cats. I like cats. I like cats. I like cats. I like cats. I like cats. I like cats.
+                    I like cats. I like cats. I like cats. I like cats. I like cats. I like cats. I like cats. I like cats. I like cats. I like cats.
+                    I like cats. I like cats. I like cats. I like cats. I like cats. I like cats. I like cats. I like cats. I like cats. I like cats.
+                    I like cats. I like cats. I like cats. I like cats. I like cats. I like cats. I like cats. I like cats. I like cats. I like cats.
+                    I like cats. I like cats. I like cats. I like cats. I like cats. I like cats. I like cats. I like cats. I like cats. I like cats.
+                </p>
+            </section>
+        </main>
+        <footer>@Foobar Inc</footer>
+    </body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar p-0 navbar-expand-lg justify-between navbar-light bg-light">
+        <div class="container py-2 border-bottom border-light-subtle">
+            <div class="d-flex align-items-center gap-3">
+                <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg" width="40" alt="Bootstrap" style="filter: grayscale(1);">
+                <a class="navbar-brand self-center" href="#">Pricing example</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Enterprise</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Support</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Pricing</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+    </nav>
+    <div class="container mt-5">
+        <div class="container w-75" style="text-align: center; hyphens: auto;">
+            <h2 class="text-center fw-normal fs-1">Pricing</h4>
+            <p class="mt-4 text-body-secondary lh-base">
+                Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization.
+            </p>
+        </div>
+        <div class="row mt-6">
+            <div class="col-md-4">
+                <div class="subscription-card selected border border-light-subtle">
+                    <div class="card-head bg-light rounded-bottom-0">
+                        <h3 class="card-title">Free</h3>
+                    </div>
+                    
+                    <h3 class="mt-4"><b>$0</b>/month</h3>
+                    <p class="mt-4">10 users included</p>
+                    <p>2 GB of storage</p>
+                    <p>Email support</p>
+                    <p>Help center access</p>
+                    <button class="btn btn-white border border-primary pt-2 text-primary subscribe mt-4">Sign up for free</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="subscription-card">
+                    <div class="card-head bg-light rounded-bottom-0">
+                        <h3 class="card-title">Pro</h3>
+                    </div>
+                    
+                    <h3 class="mt-4"><b>$15</b>/month</h3>
+                    <p class="mt-4">20 users included</p>
+                    <p>10 GB of storage</p>
+                    <p>Priority email support</p>
+                    <p>Help center access</p>
+                    <button class="btn btn-primary pt-2 subscribe mt-4" data-plan="Standard" data-price="20">Get started</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="subscription-card border border-primary">
+                    <div class="card-head bg-primary rounded-top-3 rounded-bottom-0">
+                        <h3 class="card-title text-white">Enterprise</h3>
+                    </div>
+                    
+                    <h3 class="mt-4"><b>$29</b>/month</h3>
+                    <p class="mt-4">30 users included</p>
+                    <p>15 GB of storage</p>
+                    <p>Phone and email support</p>
+                    <p>Help center access</p>
+                    <button class="btn btn-primary pt-2 subscribe mt-4">Contact us</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <h2 class="text-center fw-light fs-2 my-4">Compare plans</h4>
+        <table class="table text-center">
+            <thead>
+                <tr>
+                <th style="width: 40%;" scope="col"></th>
+                <th style="width: 20%;" scope="col">Free</th>
+                <th style="width: 20%;" scope="col">Pro</th>
+                <th style="width: 20%;" scope="col">Enterprise</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <th scope="row" class="text-start">Public</th>
+                <td class="bi bi-check fs-4"></td>
+                <td class="bi bi-check fs-4"></td>
+                <td class="bi bi-check fs-4"></td>
+                </tr>
+                <tr>
+                <th scope="row" class="text-start">Private</th>
+                <td></td>
+                <td class="bi bi-check fs-4"></td>
+                <td class="bi bi-check fs-4"></td>
+                </tr>
+                <tr>
+                <th scope="row" class="text-start">Permissions</th>
+                <td class="bi bi-check fs-4"></td>
+                <td class="bi bi-check fs-4"></td>
+                <td class="bi bi-check fs-4"></td>
+                </tr>
+                <tr>
+                <th scope="row" class="text-start">Sharing</th>
+                <td></td>
+                <td class="bi bi-check fs-4"></td>
+                <td class="bi bi-check fs-4"></td>
+                </tr>
+                <tr>
+                <th scope="row" class="text-start">Unlimited members</th>
+                <td></td>
+                <td class="bi bi-check fs-4"></td>
+                <td class="bi bi-check fs-4"></td>
+                </tr>
+                <tr>
+                <th scope="row" class="text-start">Extra security</th>
+                <td></td>
+                <td></td>
+                <td class="bi bi-check fs-4"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-3">
+                <ul class="list-unstyled text-secondary d-flex flex-column gap-2">
+                    <li><img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png" width="40" alt="Bootstrap"></li>
+                    <li>© 2017-2022</li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <ul class="list-unstyled text-secondary d-flex flex-column gap-2">
+                    <li class="fw-medium text-dark fs-5">Features</li>
+                    <li>Cool stuff</li>
+                    <li>Random feature</li>
+                    <li>Team feature</li>
+                    <li>Stuff for developers</li>
+                    <li>Another one</li>
+                    <li>Last one</li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <ul class="list-unstyled text-secondary d-flex flex-column gap-2">
+                    <li class="fw-medium text-dark fs-5">Resources</li>
+                    <li>Resource</li>
+                    <li>Resource name</li>
+                    <li>Another resource</li>
+                    <li>Final resource</li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <ul class="list-unstyled text-secondary d-flex flex-column gap-2">
+                    <li class="fw-medium text-dark fs-5">About</li>
+                    <li>Team</li>
+                    <li>Locations</li>
+                    <li>Privacy</li>
+                    <li>Terms</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

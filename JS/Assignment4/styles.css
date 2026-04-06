@@ -1,0 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div {
+    padding: 1rem;
+}
+
+.key {
+    color: #00628f;
+}
+
+#table {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #d3d3d3;
+    margin-left: 4rem;
+}
+
+td {
+    border-bottom: 1px dotted black;
+    padding: 0.5rem 1rem;
+}

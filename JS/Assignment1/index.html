@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tax Calculator</title>
+    </head>
+    <body style="display: flex; flex-direction: column; gap: 2rem;">
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <div style="display: flex; gap: 1rem;"><span>Enter taxable income:</span><input id="income" name="income" type="number" placeholder="0" /><button id="calculate-button">Calculate</button></div>
+            <div style="display: flex; gap: 1rem;"><span>Income tax owed:</span><input disabled id="tax" name="tax" type="number" /></div>
+        </div>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <thead>
+                <tr>
+                <th colspan="2">Taxable income</th>
+                <th colspan="2">Income tax</th>
+                </tr>
+                <tr>
+                <th>Over…</th>
+                <th>But not over…</th>
+                <th></th>
+                <th>Of excess over…</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                <td>$0</td>
+                <td>$9,275</td>
+                <td>$0 plus 10%</td>
+                <td>$0</td>
+                </tr>
+                <tr>
+                <td>$9,275</td>
+                <td>$37,650</td>
+                <td>$927.50 plus 15%</td>
+                <td>$9,275</td>
+                </tr>
+                <tr>
+                <td>$37,650</td>
+                <td>$91,150</td>
+                <td>$5,183.75 plus 25%</td>
+                <td>$37,650</td>
+                </tr>
+                <tr>
+                <td>$91,150</td>
+                <td>$190,150</td>
+                <td>$18,558.75 plus 28%</td>
+                <td>$91,150</td>
+                </tr>
+                <tr>
+                <td>$190,150</td>
+                <td>$413,350</td>
+                <td>$46,278.75 plus 33%</td>
+                <td>$190,150</td>
+                </tr>
+                <tr>
+                <td>$413,350</td>
+                <td>$415,050</td>
+                <td>$119,934.75 plus 35%</td>
+                <td>$413,350</td>
+                </tr>
+                <tr>
+                <td>$415,050</td>
+                <td></td>
+                <td>$120,529.75 plus 39.6%</td>
+                <td>$415,050</td>
+                </tr>
+            </tbody>
+        </table>
+        <script src="./script.js"></script>
+    </body>
+</html>

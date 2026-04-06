@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student Form</title>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                padding: 5rem 0;
+            }
+            form {
+                padding: 3rem;
+                background-color: pink;
+                border-radius: 10px;
+                min-width: 50vw;
+            }
+            label {
+                display: block;
+            }
+            input {
+                padding: 5px 0;
+                margin-bottom: 1rem;
+                width: 100%;
+            }
+            button:hover {
+                cursor: pointer;
+            }
+            .group {
+                display: flex;
+                align-items: center;
+                margin-bottom: 1rem;
+            }
+            fieldset {
+                margin-bottom: 2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <h1>Student Form</h1>
+            <p style="color: #7c7c7c;">Please fill out all required fields.</p>
+            <input style="margin-bottom: 2rem;" type="reset" value="Reset Form">
+            
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Full Name</label>
+                <input type="text" name="name" id="name" placeholder="Full name" required>
+
+                <label for="name">Roll Number</label>
+                <input type="text" name="roll" id="roll" placeholder="Roll number" required>
+                
+                <label for="name">Date of Birth</label>
+                <input type="date" name="birthdate" id="birthdate" required>
+
+                <label for="name">Gender</label>
+                <div class="group">
+                    <input type="radio" name="male" value="male" placeholder="male">Male
+                    <input type="radio" name="female" value="female">Female
+                    <input type="radio" name="other" value="other">Other
+                </div>
+                <label for="name">Hobbies/Interests</label>
+                <div class="group">
+                    <input type="checkbox" name="swimming" value="swimming">Swimming
+                    <input type="checkbox" name="gaming" value="gaming">Gaming
+                    <input type="checkbox" name="cat" value="cat">Petting cat 
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Contact Information</legend>
+                <label for="name">Email</label>
+                <input type="text" name="email" id="email" placeholder="Email" required>
+                
+                <label for="name">Phone Number</label>
+                <input type="tel" name="phone" id="phone" placeholder="1234567890" pattern="\d{10}" required>
+                
+                <label for="name">Address</label>
+                <textarea style="margin-bottom: 1rem; width: 100%;" type="text" name="address" id="address" required></textarea>
+            </fieldset>
+            
+            <label for="name">Course Enrolled</label>
+            <select style="margin-bottom: 2rem; display: block;" name="course" id="course" required>
+                <option value="CS101">CS101</option>
+                <option value="ENG101">ENG101</option>
+            </select>
+        
+            <input style="margin-bottom: 2rem;" type="submit" value="Submit Form">
+        </form>
+    </body>
+</html>

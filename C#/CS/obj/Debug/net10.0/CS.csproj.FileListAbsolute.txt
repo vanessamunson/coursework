@@ -1,0 +1,15 @@
+C:\Users\capta\StartupHakk-Course\.Net Web Development\07-C#\CS\obj\Debug\net10.0\CS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\capta\StartupHakk-Course\.Net Web Development\07-C#\CS\obj\Debug\net10.0\CS.AssemblyInfoInputs.cache
+C:\Users\capta\StartupHakk-Course\.Net Web Development\07-C#\CS\obj\Debug\net10.0\CS.AssemblyInfo.cs
+C:\Users\capta\StartupHakk-Course\.Net Web Development\07-C#\CS\obj\Debug\net10.0\CS.csproj.CoreCompileInputs.cache
+C:\Users\capta\StartupHakk-Course\.Net Web Development\07-C#\CS\obj\Debug\net10.0\CS.sourcelink.json
+C:\Users\capta\StartupHakk-Course\.Net Web Development\07-C#\CS\bin\Debug\net10.0\CS.exe
+C:\Users\capta\StartupHakk-Course\.Net Web Development\07-C#\CS\bin\Debug\net10.0\CS.deps.json
+C:\Users\capta\StartupHakk-Course\.Net Web Development\07-C#\CS\bin\Debug\net10.0\CS.runtimeconfig.json
+C:\Users\capta\StartupHakk-Course\.Net Web Development\07-C#\CS\bin\Debug\net10.0\CS.dll
+C:\Users\capta\StartupHakk-Course\.Net Web Development\07-C#\CS\bin\Debug\net10.0\CS.pdb
+C:\Users\capta\StartupHakk-Course\.Net Web Development\07-C#\CS\obj\Debug\net10.0\CS.dll
+C:\Users\capta\StartupHakk-Course\.Net Web Development\07-C#\CS\obj\Debug\net10.0\refint\CS.dll
+C:\Users\capta\StartupHakk-Course\.Net Web Development\07-C#\CS\obj\Debug\net10.0\CS.pdb
+C:\Users\capta\StartupHakk-Course\.Net Web Development\07-C#\CS\obj\Debug\net10.0\CS.genruntimeconfig.cache
+C:\Users\capta\StartupHakk-Course\.Net Web Development\07-C#\CS\obj\Debug\net10.0\ref\CS.dll
