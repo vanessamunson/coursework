@@ -1,0 +1,10 @@
+<Solution>
+  <Project Path="../BloggerAPI.test/BloggerAPI.Test.csproj" Id="e549c5ea-8aea-4695-9f8d-a89a363c8b84" />
+  <Project Path="../Contracts/Contracts.csproj" Id="cf30440a-6712-49e8-a1ab-a49c3a1153fe" />
+  <Project Path="../Db/Db.csproj" Id="a37cdbcd-b069-41cd-a3f2-37df53d9b792" />
+  <Project Path="../Entities/Entities.csproj" Id="e54bc08f-2a69-43eb-8710-39570dbc08c4" />
+  <Project Path="../Implementation/Implementation.csproj" Id="2ea9e29d-e21f-47d0-9b0d-23a8e31a88ff" />
+  <Project Path="../Interfaces/Interfaces.csproj" Id="c330c925-5710-4230-999e-11a2d43eb3fb" />
+  <Project Path="../Shared/Shared.csproj" Id="c1890268-93d5-46a7-aa72-0a55eeed82ef" />
+  <Project Path="BloggerAPI.csproj" />
+</Solution>
