@@ -1,14 +1,27 @@
-using BloggerAPI.Data;
+using Db;
+using Implementation;
+using Interfaces;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
-// Add services to the container.
 
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console()
+    .WriteTo.File("logs/log-.txt", rollingInterval: RollingInterval.Day)
+    .CreateBootstrapLogger();
+
+// Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddDbContext<BloggerDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IJwtService, JwtService>();
+
+builder.Host.UseSerilog();
 
 var app = builder.Build();
 

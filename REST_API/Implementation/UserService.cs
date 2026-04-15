@@ -10,7 +10,7 @@ namespace Implementation
         private readonly IJwtService _jwtService;
         private readonly BloggerDbContext _context;
 
-        public UserService(IJwtService jwtService, BloggerDbContext context)
+        public UserService(BloggerDbContext context, IJwtService jwtService)
         {
             _context = context;
             _jwtService = jwtService;
@@ -33,16 +33,17 @@ namespace Implementation
             return new Entities.User { };
         }
 
-        public void Add(User user)
+        public void Add(CreateUserRequest request)
         {
-            if (user != null)
+            if (request != null)
             {
                 var newUser = new Entities.User 
                 { 
-                    Username = user.Username, 
-                    Password = user.Password, 
+                    Username = request.Username, 
+                    Password = request.Password, 
+                    Role = request.Role,
                 };
-                _context.Users.Add(user);
+                _context.Users.Add(newUser);
                 _context.SaveChanges();
 
             }
@@ -59,6 +60,7 @@ namespace Implementation
                 {
                     dbUser.Username = user.Username;
                     dbUser.Password = user.Password;
+                    dbUser.Role = user.Role;
                     _context.Update(dbUser);
                     _context.SaveChanges();
                 }

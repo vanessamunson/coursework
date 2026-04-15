@@ -7,8 +7,8 @@ public interface IUserService
 {
     List<User> GetAll();
     User GetById(int id);
-    void Add(User user);
+    void Add(CreateUserRequest request);
     void Update(int id, User user);
-    void Delete(int id);
+    void DeleteById(int id);
     AuthenticateResponse Authenticate(string username, string password);
 }

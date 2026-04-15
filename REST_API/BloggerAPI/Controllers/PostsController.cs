@@ -1,9 +1,14 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using BloggerAPI.Data;
-using BloggerAPI.Models;
+﻿using BloggerAPI.Services;
+using Db;
+using Entities;
+using Implementation;
+using Interfaces;
+using Contracts;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using BloggerAPI.CustomAttributes;
 
 namespace BloggerAPI.Controllers
 {
@@ -11,77 +16,87 @@ namespace BloggerAPI.Controllers
     [Route("api/[controller]")]
     public class PostsController : ControllerBase
     {
-        private readonly BloggerDbContext _context;
+        private readonly IPostService _postService;
+        private readonly ILogger _logger;
 
-        public PostsController(BloggerDbContext context)
+        public PostsController(IPostService postService, ILogger<PostsController> logger)
         {
-            _context = context;
+            _postService = postService;
+            _logger = logger;
         }
+
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Post>>> GetPosts()
+        public List<Post> Get()
         {
-            return await _context.Posts.ToListAsync();
+            return _postService.GetAll();
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Post>> GetPost(int id)
+        public Post GetById(int id)
         {
-            var post = await _context.Posts.FindAsync(id);
+            try
+            {
+                _logger.LogInformation("Getting post with ID {PostId}", id);
+                return _postService.GetById(id);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error getting post with ID {PostId}", id);
+                return null;
+            }
 
-            if (post == null)
-                return NotFound();
-
-            return post;
         }
 
+        [Authorize]
         [HttpPost]
-        public async Task<ActionResult<Post>> CreatePost(Post post)
+        public void Post([FromBody] CreatePostRequest request)
         {
-            var userExists = await _context.Users.AnyAsync(u => u.Id == post.UserId);
+            try
+            {
+                _logger.LogInformation("Creating a new post with title {PostTitle}", request.Title);
+                _postService.Add(request);
 
-            if (!userExists)
-                return BadRequest("Invalid UserId.");
-
-            _context.Posts.Add(post);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction(nameof(GetPost), new { id = post.Id }, post);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error creating a new post with title {PostTitle}", request.Title);
+            }
         }
 
+        [Authorize]
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdatePost(int id, Post updatedPost)
+        public void Put(int id, [FromBody] Post post)
         {
-            var post = await _context.Posts.FindAsync(id);
-
-            if (post == null)
-                return NotFound();
-
-            var userExists = await _context.Users.AnyAsync(u => u.Id == updatedPost.UserId);
-
-            if (!userExists)
-                return BadRequest("Invalid UserId.");
-
-            post.Title = updatedPost.Title;
-            post.Body = updatedPost.Body;
-            post.UserId = updatedPost.UserId;
-
-            await _context.SaveChangesAsync();
-
-            return NoContent();
+            try
+            {
+                _logger.LogInformation("Updating post with ID {PostId}", id);
+                if (id != post.Id)
+                {
+                    _logger.LogWarning("Post ID in the URL does not match the post ID in the body");
+                    return;
+                }
+                _postService.Update(id, post);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error updating post with ID {PostId}", id);
+            }
         }
 
+        [Authorize]
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeletePost(int id)
+        public void Delete(int id)
         {
-            var post = await _context.Posts.FindAsync(id);
+            try
+            {
+                _logger.LogInformation("Deleting post with ID {PostId}", id);
+                _postService.DeleteById(id);
 
-            if (post == null)
-                return NotFound();
-
-            _context.Posts.Remove(post);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error deleting post with ID {PostId}", id);
+            }
         }
     }
 }

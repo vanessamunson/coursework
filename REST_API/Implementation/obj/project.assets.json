@@ -255,6 +255,38 @@
           }
         }
       },
+      "Serilog/4.3.1": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Serilog.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Serilog.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Serilog.targets": {}
+        }
+      },
+      "Serilog.Sinks.File/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Serilog": "4.2.0"
+        },
+        "compile": {
+          "lib/net9.0/Serilog.Sinks.File.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Serilog.Sinks.File.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.IdentityModel.Tokens.Jwt/8.17.0": {
         "type": "package",
         "dependencies": {
@@ -321,6 +353,16 @@
         },
         "runtime": {
           "bin/placeholder/Interfaces.dll": {}
+        }
+      },
+      "Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shared.dll": {}
         }
       }
     }
@@ -773,6 +815,60 @@
         "microsoft.identitymodel.tokens.nuspec"
       ]
     },
+    "Serilog/4.3.1": {
+      "sha512": "savYe7h5yRlkqBVOwP8cIRDOdqKiPmYCU4W87JH38sBmcKD5EBoXvQIw6bNEvZ/pTe1gsiye3VFCzBsoppGkXQ==",
+      "type": "package",
+      "path": "serilog/4.3.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "build/Serilog.targets",
+        "buildTransitive/Serilog.targets",
+        "icon.png",
+        "lib/net10.0/Serilog.dll",
+        "lib/net10.0/Serilog.xml",
+        "lib/net462/Serilog.dll",
+        "lib/net462/Serilog.xml",
+        "lib/net471/Serilog.dll",
+        "lib/net471/Serilog.xml",
+        "lib/net6.0/Serilog.dll",
+        "lib/net6.0/Serilog.xml",
+        "lib/net8.0/Serilog.dll",
+        "lib/net8.0/Serilog.xml",
+        "lib/net9.0/Serilog.dll",
+        "lib/net9.0/Serilog.xml",
+        "lib/netstandard2.0/Serilog.dll",
+        "lib/netstandard2.0/Serilog.xml",
+        "serilog.4.3.1.nupkg.sha512",
+        "serilog.nuspec"
+      ]
+    },
+    "Serilog.Sinks.File/7.0.0": {
+      "sha512": "fKL7mXv7qaiNBUC71ssvn/dU0k9t0o45+qm2XgKAlSt19xF+ijjxyA3R6HmCgfKEKwfcfkwWjayuQtRueZFkYw==",
+      "type": "package",
+      "path": "serilog.sinks.file/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net462/Serilog.Sinks.File.dll",
+        "lib/net462/Serilog.Sinks.File.xml",
+        "lib/net471/Serilog.Sinks.File.dll",
+        "lib/net471/Serilog.Sinks.File.xml",
+        "lib/net6.0/Serilog.Sinks.File.dll",
+        "lib/net6.0/Serilog.Sinks.File.xml",
+        "lib/net8.0/Serilog.Sinks.File.dll",
+        "lib/net8.0/Serilog.Sinks.File.xml",
+        "lib/net9.0/Serilog.Sinks.File.dll",
+        "lib/net9.0/Serilog.Sinks.File.xml",
+        "lib/netstandard2.0/Serilog.Sinks.File.dll",
+        "lib/netstandard2.0/Serilog.Sinks.File.xml",
+        "serilog-sink-nuget.png",
+        "serilog.sinks.file.7.0.0.nupkg.sha512",
+        "serilog.sinks.file.nuspec"
+      ]
+    },
     "System.IdentityModel.Tokens.Jwt/8.17.0": {
       "sha512": "nKikRYheDeSaXA3wGr2otwaiRFygBa25m+hc7MEomZVIEWZvKVqd8wgP9yn+8QpLRGgw//dUs4LErGx9gtVmAA==",
       "type": "package",
@@ -818,6 +914,11 @@
       "type": "project",
       "path": "../Interfaces/Interfaces.csproj",
       "msbuildProject": "../Interfaces/Interfaces.csproj"
+    },
+    "Shared/1.0.0": {
+      "type": "project",
+      "path": "../Shared/Shared.csproj",
+      "msbuildProject": "../Shared/Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -826,27 +927,30 @@
       "Db >= 1.0.0",
       "Entities >= 1.0.0",
       "Interfaces >= 1.0.0",
+      "Serilog >= 4.3.1",
+      "Serilog.Sinks.File >= 7.0.0",
+      "Shared >= 1.0.0",
       "System.IdentityModel.Tokens.Jwt >= 8.17.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\vanes\\.nuget\\packages\\": {},
+    "C:\\Users\\capta\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vanes\\source\\repos\\Implementation\\Implementation.csproj",
+      "projectUniqueName": "C:\\Users\\capta\\coursework\\REST_API\\Implementation\\Implementation.csproj",
       "projectName": "Implementation",
-      "projectPath": "C:\\Users\\vanes\\source\\repos\\Implementation\\Implementation.csproj",
-      "packagesPath": "C:\\Users\\vanes\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vanes\\source\\repos\\Implementation\\obj\\",
+      "projectPath": "C:\\Users\\capta\\coursework\\REST_API\\Implementation\\Implementation.csproj",
+      "packagesPath": "C:\\Users\\capta\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\capta\\coursework\\REST_API\\Implementation\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\vanes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\capta\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -861,17 +965,20 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Users\\vanes\\source\\repos\\Contracts\\Contracts.csproj": {
-              "projectPath": "C:\\Users\\vanes\\source\\repos\\Contracts\\Contracts.csproj"
+            "C:\\Users\\capta\\coursework\\REST_API\\Contracts\\Contracts.csproj": {
+              "projectPath": "C:\\Users\\capta\\coursework\\REST_API\\Contracts\\Contracts.csproj"
             },
-            "C:\\Users\\vanes\\source\\repos\\Db\\Db.csproj": {
-              "projectPath": "C:\\Users\\vanes\\source\\repos\\Db\\Db.csproj"
+            "C:\\Users\\capta\\coursework\\REST_API\\Db\\Db.csproj": {
+              "projectPath": "C:\\Users\\capta\\coursework\\REST_API\\Db\\Db.csproj"
             },
-            "C:\\Users\\vanes\\source\\repos\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\vanes\\source\\repos\\Entities\\Entities.csproj"
+            "C:\\Users\\capta\\coursework\\REST_API\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\capta\\coursework\\REST_API\\Entities\\Entities.csproj"
             },
-            "C:\\Users\\vanes\\source\\repos\\Interfaces\\Interfaces.csproj": {
-              "projectPath": "C:\\Users\\vanes\\source\\repos\\Interfaces\\Interfaces.csproj"
+            "C:\\Users\\capta\\coursework\\REST_API\\Interfaces\\Interfaces.csproj": {
+              "projectPath": "C:\\Users\\capta\\coursework\\REST_API\\Interfaces\\Interfaces.csproj"
+            },
+            "C:\\Users\\capta\\coursework\\REST_API\\Shared\\Shared.csproj": {
+              "projectPath": "C:\\Users\\capta\\coursework\\REST_API\\Shared\\Shared.csproj"
             }
           }
         }
@@ -892,6 +999,14 @@
       "net10.0": {
         "targetAlias": "net10.0",
         "dependencies": {
+          "Serilog": {
+            "target": "Package",
+            "version": "[4.3.1, )"
+          },
+          "Serilog.Sinks.File": {
+            "target": "Package",
+            "version": "[7.0.0, )"
+          },
           "System.IdentityModel.Tokens.Jwt": {
             "target": "Package",
             "version": "[8.17.0, )"
