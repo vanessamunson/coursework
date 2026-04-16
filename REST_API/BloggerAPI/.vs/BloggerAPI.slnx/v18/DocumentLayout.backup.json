@@ -3,12 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\vanes\\source\\repos\\BloggerAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F511621F-6071-3C9B-160B-937D039F6FCD}|BloggerAPI.csproj|c:\\users\\vanes\\source\\repos\\bloggerapi\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F511621F-6071-3C9B-160B-937D039F6FCD}|BloggerAPI.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E549C5EA-8AEA-4695-9F8D-A89A363C8B84}|..\\BloggerAPI.test\\BloggerAPI.test.csproj|c:\\users\\vanes\\source\\repos\\bloggerapi.test\\helper\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E549C5EA-8AEA-4695-9F8D-A89A363C8B84}|..\\BloggerAPI.test\\BloggerAPI.test.csproj|c:\\users\\vanes\\source\\repos\\bloggerapi.test\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F511621F-6071-3C9B-160B-937D039F6FCD}|BloggerAPI.csproj|c:\\users\\vanes\\source\\repos\\bloggerapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F511621F-6071-3C9B-160B-937D039F6FCD}|BloggerAPI.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F511621F-6071-3C9B-160B-937D039F6FCD}|BloggerAPI.csproj|c:\\users\\vanes\\source\\repos\\bloggerapi\\customattributes\\authorizeattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F511621F-6071-3C9B-160B-937D039F6FCD}|BloggerAPI.csproj|solutionrelative:customattributes\\authorizeattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F511621F-6071-3C9B-160B-937D039F6FCD}|BloggerAPI.csproj|c:\\users\\vanes\\source\\repos\\bloggerapi\\controllers\\authenticatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F511621F-6071-3C9B-160B-937D039F6FCD}|BloggerAPI.csproj|solutionrelative:controllers\\authenticatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,27 +33,66 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\vanes\\source\\repos\\BloggerAPI\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\vanes\\source\\repos\\BloggerAPI\\Services\\UserService.cs",
-              "RelativeToolTip": "Services\\UserService.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAIwFgAAAAAAAAAAAAAAA==",
+              "Title": "DatabaseHelper.cs",
+              "DocumentMoniker": "C:\\Users\\vanes\\source\\repos\\BloggerAPI.test\\Helper\\DatabaseHelper.cs",
+              "RelativeDocumentMoniker": "..\\BloggerAPI.test\\Helper\\DatabaseHelper.cs",
+              "ToolTip": "C:\\Users\\vanes\\source\\repos\\BloggerAPI.test\\Helper\\DatabaseHelper.cs",
+              "RelativeToolTip": "..\\BloggerAPI.test\\Helper\\DatabaseHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T19:08:01.846Z",
+              "WhenOpened": "2026-04-06T22:36:59.618Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\vanes\\source\\repos\\BloggerAPI.test\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "..\\BloggerAPI.test\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\vanes\\source\\repos\\BloggerAPI.test\\UnitTest1.cs",
+              "RelativeToolTip": "..\\BloggerAPI.test\\UnitTest1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-06T22:34:31.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "UsersController.cs",
               "DocumentMoniker": "C:\\Users\\vanes\\source\\repos\\BloggerAPI\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
               "ToolTip": "C:\\Users\\vanes\\source\\repos\\BloggerAPI\\Controllers\\UsersController.cs",
               "RelativeToolTip": "Controllers\\UsersController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-03T22:42:26.746Z",
+              "WhenOpened": "2026-04-06T22:26:48.84Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthorizeAttribute.cs",
+              "DocumentMoniker": "C:\\Users\\vanes\\source\\repos\\BloggerAPI\\CustomAttributes\\AuthorizeAttribute.cs",
+              "RelativeDocumentMoniker": "CustomAttributes\\AuthorizeAttribute.cs",
+              "ToolTip": "C:\\Users\\vanes\\source\\repos\\BloggerAPI\\CustomAttributes\\AuthorizeAttribute.cs",
+              "RelativeToolTip": "CustomAttributes\\AuthorizeAttribute.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-06T22:24:47.023Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthenticateController.cs",
+              "DocumentMoniker": "C:\\Users\\vanes\\source\\repos\\BloggerAPI\\Controllers\\AuthenticateController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthenticateController.cs",
+              "ToolTip": "C:\\Users\\vanes\\source\\repos\\BloggerAPI\\Controllers\\AuthenticateController.cs",
+              "RelativeToolTip": "Controllers\\AuthenticateController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-06T22:20:37.367Z",
               "EditorCaption": ""
             }
           ]
