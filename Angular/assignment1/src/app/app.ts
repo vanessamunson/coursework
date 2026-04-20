@@ -7,10 +7,15 @@ import { Home } from './home/home';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {
+export class App implements OnInit {
+  public message:string = '';
   backgroundColor:string = 'white';
 
   onMixChange(color:string):void {
     this.backgroundColor = color;
   }  
+
+  ngOnInit(): void {
+      this.message = 'I am from the App Component.'
+  }
 }

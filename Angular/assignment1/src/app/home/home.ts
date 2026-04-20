@@ -1,4 +1,4 @@
-import { Component, OnChanges, OnInit, SimpleChanges, Output, EventEmitter } from '@angular/core';
+import { Component, OnChanges, SimpleChanges, Output, EventEmitter, Input } from '@angular/core';
 import { Body } from '../body/body';
 
 @Component({
@@ -7,8 +7,8 @@ import { Body } from '../body/body';
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
-export class Home implements OnInit, OnChanges{
-
+export class Home implements OnChanges{
+  @Input() message: string = '';
   @Output() _mixedColor = new EventEmitter<string>();
   _color: string = '';
   _bodyColor: string = '';
@@ -52,7 +52,10 @@ export class Home implements OnInit, OnChanges{
     }
   }
 
-  ngOnInit(): void {}
-
-  ngOnChanges(changes: SimpleChanges): void {}
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log('NgOnChanges called:');
+    for (const change in changes) {
+      console.log(change);
+    }
+  }
 }
