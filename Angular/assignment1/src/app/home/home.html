@@ -1,0 +1,9 @@
+<section>
+    <h1>Home Component (parent)</h1>
+    <div class="button-container">
+        <button (click)="chooseColor('red')" style="background-color: red;">Red</button>
+        <button (click)="chooseColor('yellow')" style="background-color: yellow;">Yellow</button>
+        <button (click)="chooseColor('blue')" style="background-color: blue;">Blue</button>
+    </div> 
+</section>
+<app-body (_color)="onBodyColorChange($event)"></app-body>

@@ -1,12 +1,16 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { Home } from './home/home';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [Home],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('assignment1');
+  backgroundColor:string = 'white';
+
+  onMixChange(color:string):void {
+    this.backgroundColor = color;
+  }  
 }
