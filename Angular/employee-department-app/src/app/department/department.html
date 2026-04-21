@@ -1,0 +1,27 @@
+<main class="flex flex-col items-center justify-center min-h-[100vh]">
+    <h1 class="text-center text-4xl pb-4 font-bold">Department</h1>
+    <a class="underline text-neutral-600 pb-12" routerLink="/department">switch route to Department</a>
+    <div class="grid grid-cols-2 gap-2 max-w-[50vw]">
+        <section class="border p-2">
+            <form [formGroup]="deptForm" (ngSubmit)="onSubmitFormHandler()" class="flex flex-col gap-4 w-fit">
+                <div class="flex flex-col">
+                    <label for="name">Department Name</label>
+                    <input class="border border-neutral-400 p-1 rounded-sm" formControlName="deptName" type="text" name="name">
+                </div>
+                <div class="flex flex-col">
+                    <label for="head">Department Head</label>
+                    <input class="border border-neutral-400 p-1 rounded-sm" formControlName="deptHead" type="string" name="head">
+                </div>
+                <div class="flex flex-col">
+                    <label for="budget">Budget</label>
+                    <input class="border border-neutral-400 p-1 rounded-sm" formControlName="budget" type="number" name="budget">
+                </div>
+                <button class="text-white bg-blue-600 py-2 px-4 rounded-sm hover:shadow-md" type="submit">Submit</button>
+            </form>
+        </section>
+        <section class="border p-2">
+            <h1 class="text-center">Output</h1>
+            <div [innerHTML]="output"></div>
+        </section>
+    </div>
+</main>
